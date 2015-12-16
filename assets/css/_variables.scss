@@ -1,8 +1,19 @@
 // _variables.scss
-@import url(https://fonts.googleapis.com/css?family=Lobster|Arvo);
+@import url(https://fonts.googleapis.com/css?family=Lobster|Arvo|Bevan);
 
-$bg-color: #EAC68A; // "Cream"
-$color1: #312B22;   // Dark gray
+// Color palette from: http://www.colourlovers.com/palette/49963/let_them_eat_cake
+//$bg-color: #EAC68A; // "Cream"
+$color1: #C5E0DC;   // Dark gray
+$color2: #E08E79;
 
-$h1-font: Lobster, sans-serif;
-$box-font: Arvo, sans-serif;
+//$gradient1: #57c1eb;
+//$gradient2: #246fa8;
+
+$gradient1: #ECE5CE;        // powderpuff
+$gradient2: #C5E0DC;        // charlotte
+
+$border-color: #E08E79;     // strawberry sugar
+$accent1: #774F38;          // banquette
+
+$h1-font: Bevan, cursive;
+$box-font: Arvo, serif;

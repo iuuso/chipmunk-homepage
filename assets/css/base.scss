@@ -7,7 +7,7 @@ html body {
     min-height: 100%;
 
     // TODO: Works fine with Chromium, add support for another engines as well.
-    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#57c1eb), to(#246fa8));
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from($gradient1), to($gradient2));
 }
 
 #box {
@@ -16,19 +16,28 @@ html body {
     background: none;
 
     h1 {
-        font-size: 7em;
+        font-size: 5em;
         font-family: $h1-font;
         font-weight: 400;
+        text-transform: uppercase;
         color: $color1;
         text-align: center;
+        text-shadow: rgba(0, 0, 0, .2) 5px 5px 5px;
 
-        border-bottom: 2px solid $color1;
+        border-bottom: 5px solid $border-color;
+        margin-bottom: 0;
     }
 
     p {
-        padding: .2em 1em 0 1em;
+        padding: 0em 1em 0 1em;
         font-family: $box-font;
         font-weight: 500;
-        font-size: 1.5em;
+        font-size: 1.8em;
+        color: $color2;
     }
+}
+
+.info {
+    color: $accent1;
+    font-weight: 600;
 }

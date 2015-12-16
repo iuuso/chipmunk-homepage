@@ -2,13 +2,41 @@
 // _footer.scss
 // As the name implies, this is where you can
 // find the footer implementation.
+@import 'variables';
 
 footer {
-    height: 200px;
+    height: 3em;
     width: 100%;
-    background: white;
-    border: 3px solid red;
+    background: none;
+    border-bottom: 3px solid $border-color;
 
     position: absolute;
     bottom: 0px;
+
+    ul {
+        list-style-type: none;
+        float: center;
+        color: $accent1;
+
+        li {
+            float: left;
+            text-align: center;
+            margin-left: 2em;
+            padding-left: 5px;
+            font-weight: 700;
+            border-left: 1.2em solid $border-color;
+        }
+
+        a { 
+            color: $accent1;
+            text-decoration: none;
+            font-family: $box-font;
+            font-weight: 700;
+            transition: .5s all ease;
+            text-shadow: rgba(0, 0, 0, .2) 1px 1px 1px;
+            font-size: 15;
+        }
+
+        a:hover { color: $border-color; transition: .5s all ease; }
+    }
 }
