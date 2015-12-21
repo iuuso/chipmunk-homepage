@@ -36,9 +36,9 @@ var server = http.createServer(function(request,response){
     });
 })  
 
-//Set server to listen port 1337
-server.listen(1337, function(err) {
-        console.log('Server listening port '+'1337')
+//Set server to listen port 3000
+server.listen((3000, function(err) {
+        console.log('Server listening port '+'3000')
 });
 
 // Implement WebSocket connection for connectivity
