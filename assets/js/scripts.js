@@ -2,7 +2,9 @@ var uptimeSpan = document.getElementById("uptime");
 
 window.onload = function() {
     var wsAddress = 'ws://' + window.location.hostname + ':3000';
-    var wsSocket = new WebSocket(wsAddress, 'echo-protocol');
+    //var wsSocket = new WebSocket(wsAddress, 'echo-protocol');
+    var wsSocket = new WebSocket('ws://84.248.119.111:3000', 'echo-protocol');
+    //var wsSocket = new WebSocket('ws://localhost:3000', 'echo-protocol');
 
     wsSocket.onopen = function () {
         wsSocket.send("Hello!");
