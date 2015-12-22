@@ -24,7 +24,7 @@ Chipmunk is a simple landing page for personal home servers. Node.js is used as 
 1. Install Node.js and npm
 2. Clone this repository to a location of your choice
 
-    git clone https://github.com/iuuso/chipmunk-homepage.git
+        git clone https://github.com/iuuso/chipmunk-homepage.git
 
 3. Edit the following line in file 'scripts.js' in 'assets/js/'
     var wsSocket = new WebSocket('ws://xx.xxx.xxx.xxx:3000', 'echo-protocol');
