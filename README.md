@@ -3,7 +3,7 @@ chipmunk - a simple status page for server
 
 ### Landing page with a HTTP server that displays the hostname and uptime
 
-** Please note: chipmunk is in Beta-stage at the moment and its not properly tested yet. **
+**Please note: chipmunk is in Beta-stage at the moment and its not properly tested yet.**
 
 ![chipmunk on hab.ddns.net](https://raw.githubusercontent.com/iuuso/chipmunk-homepage/master/screenshots/screenshot-1.png "Screenshot")
 
