@@ -27,7 +27,8 @@ Chipmunk is a simple landing page for personal home servers. Node.js is used as 
         git clone https://github.com/iuuso/chipmunk-homepage.git
 
 3. Edit the following line in file 'scripts.js' in 'assets/js/'
-    var wsSocket = new WebSocket('ws://xx.xxx.xxx.xxx:3000', 'echo-protocol');
+    
+        var wsSocket = new WebSocket('ws://xx.xxx.xxx.xxx:3000', 'echo-protocol');
 
  Replace the x's with the IP address of your server. 
  
@@ -35,20 +36,21 @@ Chipmunk is a simple landing page for personal home servers. Node.js is used as 
 
 4. Install the [WebSocket-Node](https://github.com/theturtle32/WebSocket-Node.git) module
 
-    npm install websocket
+        npm install websocket
 
 5. Open the port 3000 in your router for the WebSocket connection
 6. In order for getting the Node.js-server to run in the default HTTP port 80, run the following command in your server.
 
-    sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+        sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 
 This command maps your port 80 traffic to port 3000. This might cause errors, if you have another server instances running at the same time. Make sure of the network interface you're setting up, e.g. eth0, wlan0.
 
 7. Run
 
-    node http-server.js
+        node http-server.js
 
 8. Point your browser to: 'http://yourserveraddress.net/'
+9. Hopefully everything works and you'll see the proper landing page! If there are any problems, or anything that wasn't correct in this documentation, [please report an issue](https://github.com/iuuso/chipmunk-homepage/issues) or contact me via [twitter](https://twitter.com/iuuso) for example.
 
 ## TODO
 
