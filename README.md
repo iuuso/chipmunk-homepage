@@ -19,12 +19,17 @@ Chipmunk is a simple landing page for personal home servers. Node.js is used as 
 
 ## Installation
 
- 1. Install Node.js
- 2. Clone this repository 
- > git clone https://github.com/iuuso/chipmunk-homepage.git
- 3. Edit the following line in file 'scripts.js' in 'assets/js/'
+1. Install Node.js
+2. Clone this repository 
+> git clone https://github.com/iuuso/chipmunk-homepage.git
+3. Edit the following line in file 'scripts.js' in 'assets/js/'
  > var wsSocket = new WebSocket('ws://xx.xxx.xxx.xxx:3000', 'echo-protocol');
- \Replace the x's with the IP address of your server. 
+
+ Replace the x's with the IP address of your server. 
+ 
+   **Please note**: Atleast with noip there seems to be a problem when attempting to route WebSocket traffic through the service. At the moment, please use your real IP address rather than DDNS address for successfully establishing a WebSocket connection.
+
+4. 
 
 ## TOD
 O
