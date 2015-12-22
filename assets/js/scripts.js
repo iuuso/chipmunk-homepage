@@ -19,11 +19,11 @@ window.onload = function() {
     }
 
     wsSocket.onerror = function (error) {
-        window.alert("WebSocket error: " + error);
+        console.log("WebSocket error: " + error);
     }
 
     wsSocket.onclose = function () {
-        window.alert("Window closed");
+        console.log("WebSocket connection closed");
         wsSocket.close();
     }
 
