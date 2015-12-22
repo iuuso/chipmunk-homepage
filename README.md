@@ -36,9 +36,11 @@ Chipmunk is a simple landing page for personal home servers. Node.js is used as 
 5. Open the port 3000 in your router for the WebSocket connection
 6. In order for getting the Node.js-server to run in the default HTTP port 80, run the following command in your server.
 > sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+
 This command maps your port 80 traffic to port 3000. This might cause errors, if you have another server instances running at the same time. Make sure of the network interface you're setting up, e.g. eth0, wlan0. 
 7. Run
  > node http-server.js
+ 
 8. Point your browser to: 'http://yourserveraddress.net/'
 
 ## TODO
