@@ -64,8 +64,12 @@ function originIsAllowed(origin) {
 // } 
 
 function collectInfo() {
-    var infoarray = {hostname: os.hostname(), uptime: os.uptime()};
-    console.log(infoarray);
+
+    // Collect the data to be sent via websocket to client
+    var infoarray = { hostname: os.hostname(),
+                      uptime: os.uptime(),
+                      platform: os.platform(),
+                      RAM: os.totalmem() };
     return infoarray
 }
 
@@ -82,7 +86,6 @@ wsServer.on('request', function(request) {
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
             console.log('Received Message: ' + message.utf8Data);
-            //connection.sendUTF(message.utf8Data);
             connection.send(JSON.stringify(collectInfo()));
         }
         else if (message.type === 'binary') {

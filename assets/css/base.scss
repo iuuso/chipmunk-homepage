@@ -7,7 +7,8 @@ html body {
     min-height: 100%;
 
     // TODO: Works fine with Chromium, add support for another engines as well.
-    background: -webkit-gradient(radial, center center, 0, center center, 460, from($gradient1), to($gradient2));
+    //background: -webkit-gradient(radial, center center, 0, center center, 460, from($gradient1), to($gradient2));
+    background: $background-color;
 }
 
 #box {

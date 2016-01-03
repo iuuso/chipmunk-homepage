@@ -3,7 +3,7 @@ var uptimeSpan = document.getElementById("uptime");
 window.onload = function() {
     var wsAddress = 'ws://' + window.location.hostname + ':3000';
     //var wsSocket = new WebSocket(wsAddress, 'echo-protocol');
-    var wsSocket = new WebSocket('ws://84.248.119.111:3000', 'echo-protocol');
+    var wsSocket = new WebSocket('ws://localhost:3000', 'echo-protocol');
     //var wsSocket = new WebSocket('ws://localhost:3000', 'echo-protocol');
 
     wsSocket.onopen = function () {
@@ -12,10 +12,11 @@ window.onload = function() {
     }
 
     wsSocket.onmessage = function (e) {
-        console.log("Server: " + e.data);
         var data = JSON.parse(e.data);
         setHostname(data.hostname);
         calculateDaysFromSeconds(data.uptime);
+
+        input_data_to_table(data);
     }
 
     wsSocket.onerror = function (error) {
@@ -84,4 +85,18 @@ window.onload = function() {
         else { setUptime(seconds); }
     }
 
+    var table = document.getElementById("tablespan");
+    function input_data_to_table(data) {
+        console.log(data);
+        var rowCounter = 0;
+        for (var i in data) {
+            var row = table.insertRow(rowCounter);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+
+            cell1.innerHTML = i;
+            cell2.innerHTML = data[i];
+            rowCounter++
+        }
+    }
 }
